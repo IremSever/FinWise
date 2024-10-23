@@ -9,6 +9,7 @@ import UIKit
 import DGCharts
 
 class StockTimeSeriesCell: UICollectionViewCell, ChartViewDelegate {
+
     
     var viewChart = LineChartView()
     
@@ -30,14 +31,15 @@ class StockTimeSeriesCell: UICollectionViewCell, ChartViewDelegate {
         ])
     }
     
-    func configure(with timeSeriesData: [TimeSery]) {
-        guard let dataPoint = timeSeriesData.first else { return }
-        
+    func configure(with timeSeriesData: [TimeSeries]) {
         var entries = [ChartDataEntry]()
-        let entry = ChartDataEntry(x: 0, y: dataPoint.price)
-        entries.append(entry)
         
-        let set = LineChartDataSet(entries: entries, label: "Stock Prices")
+        for (index, dataPoint) in timeSeriesData.enumerated() {
+            print("Index: \(index), Price: \(dataPoint.price)") 
+            let entry = ChartDataEntry(x: Double(index), y: dataPoint.price)
+            entries.append(entry)
+        }
+        let set = LineChartDataSet(entries: entries, label: "NASDAQ Price")
         set.colors = ChartColorTemplates.material()
         set.circleColors = [UIColor.red]
         set.valueColors = [.black]
@@ -45,7 +47,6 @@ class StockTimeSeriesCell: UICollectionViewCell, ChartViewDelegate {
         let data = LineChartData(dataSet: set)
         viewChart.data = data
         
-        // Animasyon ve diğer ayarlar
         viewChart.animate(xAxisDuration: 1.5)
     }
 

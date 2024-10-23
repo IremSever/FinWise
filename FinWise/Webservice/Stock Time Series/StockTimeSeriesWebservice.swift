@@ -24,7 +24,7 @@ class StockTimeSeriesWebservice {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                print("DataTask error: \(error.localizedDescription)")
+//                print("DataTask error: \(error.localizedDescription)")
                 completion(.failure(error))
                 return
             }
@@ -34,7 +34,7 @@ class StockTimeSeriesWebservice {
                 return
             }
             
-            print("Response status code: \(httpResponse.statusCode)")
+//            print("Response status code: \(httpResponse.statusCode)")
             
             guard let data = data else {
                 print("No data returned")
@@ -53,9 +53,10 @@ class StockTimeSeriesWebservice {
                     completion(.success(stockTimeSeriesModel))
                 }
             } catch let error {
-                print("JSON parsing error: \(error.localizedDescription)")
+                print("Time Series JSON parsing error: \(error.localizedDescription)")
                 completion(.failure(error))
             }
         }.resume()
     }
 }
+

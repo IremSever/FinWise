@@ -9,17 +9,17 @@ import Foundation
 
 class StockTimeSeriesViewModel {
     private var stockTimeSeriesWebservice = StockTimeSeriesWebservice()
-    var stockTimeSeries: [TimeSery] = []
+    var stockTimeSeries: [TimeSeries] = []
     
     func fetchStockTimeSeriesData(completion: @escaping () -> ()) {
         stockTimeSeriesWebservice.fetchStockTimeSeries { [weak self] result in
             switch result {
             case .success(let stockTimeSeriesModel):
-                if stockTimeSeriesModel.data.timeSeries.isEmpty {
-                    print("No time series data available")
-                } else {
-                    self?.stockTimeSeries = stockTimeSeriesModel.data.timeSeries
+                if let timeSeriesDict = stockTimeSeriesModel.data.timeSeries {
+                    self?.stockTimeSeries = Array(timeSeriesDict.values)
                     completion()
+                } else {
+                    print("No time series data available")
                 }
                 
             case .failure(let error):
@@ -32,7 +32,7 @@ class StockTimeSeriesViewModel {
         return stockTimeSeries.count
     }
     
-    func cellForRowAt(indexPath: IndexPath) -> TimeSery {
+    func cellForRowAt(indexPath: IndexPath) -> TimeSeries {
         guard indexPath.row < stockTimeSeries.count else {
             fatalError("Index out of range for stockTimeSeries")
         }

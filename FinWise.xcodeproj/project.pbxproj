@@ -33,8 +33,6 @@
 		66CEE0982CC8D1C500309879 /* StockTimeSeriesWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEE0972CC8D1C500309879 /* StockTimeSeriesWebservice.swift */; };
 		66CEE09B2CC8D3D300309879 /* StockTimeSeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEE09A2CC8D3D300309879 /* StockTimeSeriesViewModel.swift */; };
 		66CEE09E2CC8DB9200309879 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 66CEE09D2CC8DB9200309879 /* DGCharts */; };
-		66CEE0B02CC90CF200309879 /* StocTimeSeriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CEE0AE2CC90CF200309879 /* StocTimeSeriesViewCell.swift */; };
-		66CEE0B12CC90CF200309879 /* StocTimeSeriesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66CEE0AF2CC90CF200309879 /* StocTimeSeriesViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +81,6 @@
 		66CEE0952CC8D1AE00309879 /* StockTimeSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTimeSeriesModel.swift; sourceTree = "<group>"; };
 		66CEE0972CC8D1C500309879 /* StockTimeSeriesWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTimeSeriesWebservice.swift; sourceTree = "<group>"; };
 		66CEE09A2CC8D3D300309879 /* StockTimeSeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTimeSeriesViewModel.swift; sourceTree = "<group>"; };
-		66CEE0AE2CC90CF200309879 /* StocTimeSeriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocTimeSeriesViewCell.swift; sourceTree = "<group>"; };
-		66CEE0AF2CC90CF200309879 /* StocTimeSeriesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StocTimeSeriesViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +203,7 @@
 		66CEE06B2CC7963D00309879 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				66CEE09F2CC90B8E00309879 /* Stock Time Series Controller */,
+				66CEE0782CC7C3DE00309879 /* Stock Time Series */,
 				66CEE0762CC7C3C300309879 /* Stock News */,
 				66CEE0752CC7C3B500309879 /* Trends */,
 			);
@@ -332,24 +328,6 @@
 			path = "Stock Time Series";
 			sourceTree = "<group>";
 		};
-		66CEE09F2CC90B8E00309879 /* Stock Time Series Controller */ = {
-			isa = PBXGroup;
-			children = (
-				66CEE0A02CC90BAC00309879 /* Stock Time Series Controller */,
-				66CEE0782CC7C3DE00309879 /* Stock Time Series */,
-			);
-			path = "Stock Time Series Controller";
-			sourceTree = "<group>";
-		};
-		66CEE0A02CC90BAC00309879 /* Stock Time Series Controller */ = {
-			isa = PBXGroup;
-			children = (
-				66CEE0AE2CC90CF200309879 /* StocTimeSeriesViewCell.swift */,
-				66CEE0AF2CC90CF200309879 /* StocTimeSeriesViewCell.xib */,
-			);
-			path = "Stock Time Series Controller";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -466,7 +444,6 @@
 				66CEE0402CC7900800309879 /* LaunchScreen.storyboard in Resources */,
 				66CEE03D2CC7900800309879 /* Assets.xcassets in Resources */,
 				66CEE03B2CC7900200309879 /* Main.storyboard in Resources */,
-				66CEE0B12CC90CF200309879 /* StocTimeSeriesViewCell.xib in Resources */,
 				66CEE0872CC7CB3700309879 /* StockNewsCell.xib in Resources */,
 				66CEE0712CC7967800309879 /* TrendsCell.xib in Resources */,
 			);
@@ -498,7 +475,6 @@
 				66CEE0962CC8D1AE00309879 /* StockTimeSeriesModel.swift in Sources */,
 				66CEE09B2CC8D3D300309879 /* StockTimeSeriesViewModel.swift in Sources */,
 				66CEE0912CC8CF1200309879 /* StockTimeSeriesCell.swift in Sources */,
-				66CEE0B02CC90CF200309879 /* StocTimeSeriesViewCell.swift in Sources */,
 				66CEE0832CC7CB1E00309879 /* StockNewsModel.swift in Sources */,
 				66CEE0342CC7900200309879 /* AppDelegate.swift in Sources */,
 				66CEE0652CC7906F00309879 /* Webservice.swift in Sources */,
