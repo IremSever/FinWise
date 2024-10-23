@@ -17,6 +17,7 @@ class StockNewsCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         applyGradient()
+        setBorder()
     }
     
     
@@ -27,6 +28,10 @@ class StockNewsCell: UICollectionViewCell {
         } else {
             imgNews.image = nil 
         }
+    }
+    
+    func setBorder() {
+        viewBg.layer.cornerRadius = 50
     }
     
     func applyGradient() {

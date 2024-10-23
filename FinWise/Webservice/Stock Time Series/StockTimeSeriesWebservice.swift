@@ -19,7 +19,7 @@ class StockTimeSeriesWebservice {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("840001740dmshe2a3aae55ce8f18p13bedbjsn3bcbf76a003c", forHTTPHeaderField: "x-rapidapi-key")
+        request.addValue("7de947c505msh1d01464531b88dcp11a87ajsncb0f16bd4da2", forHTTPHeaderField: "x-rapidapi-key")
         request.addValue("real-time-finance-data.p.rapidapi.com", forHTTPHeaderField: "x-rapidapi-host")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in

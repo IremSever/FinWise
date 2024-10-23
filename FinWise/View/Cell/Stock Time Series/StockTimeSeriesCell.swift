@@ -35,7 +35,7 @@ class StockTimeSeriesCell: UICollectionViewCell, ChartViewDelegate {
         var entries = [ChartDataEntry]()
         
         for (index, dataPoint) in timeSeriesData.enumerated() {
-            print("Index: \(index), Price: \(dataPoint.price)") 
+            print("Index: \(index), Price: \(dataPoint.price)")
             let entry = ChartDataEntry(x: Double(index), y: dataPoint.price)
             entries.append(entry)
         }
