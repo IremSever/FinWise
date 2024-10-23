@@ -9,8 +9,8 @@ import Foundation
 
 class StockNewsWebservice {
     
-    func fetchTrends(completion: @escaping (Result<StockNewsModel, Error>) -> Void) {
-        let urlString = "https://real-time-finance-data.p.rapidapi.com/stock-time-series?symbol=AAPL%3ANASDAQ&period=1D&language=en"
+    func fetchStockNews(completion: @escaping (Result<StockNewsModel, Error>) -> Void) {
+        let urlString = "https://real-time-finance-data.p.rapidapi.com/stock-news?symbol=AAPL%3ANASDAQ&language=en"
         
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
@@ -19,7 +19,7 @@ class StockNewsWebservice {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("8058a9f591msh08776cbbf802218p1f3240jsn803869f6f26a", forHTTPHeaderField: "x-rapidapi-key")
+        request.addValue("840001740dmshe2a3aae55ce8f18p13bedbjsn3bcbf76a003c", forHTTPHeaderField: "x-rapidapi-key")
         request.addValue("real-time-finance-data.p.rapidapi.com", forHTTPHeaderField: "x-rapidapi-host")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -47,10 +47,10 @@ class StockNewsWebservice {
             
             do {
                 let decoder = JSONDecoder()
-                let finWiseModel = try decoder.decode(StockNewsModel.self, from: data)
+                let stockNewsModel = try decoder.decode(StockNewsModel.self, from: data)
                 
                 DispatchQueue.main.async {
-                    completion(.success(finWiseModel))
+                    completion(.success(stockNewsModel))
                 }
             } catch let error {
                 print("JSON parsing error: \(error.localizedDescription)")

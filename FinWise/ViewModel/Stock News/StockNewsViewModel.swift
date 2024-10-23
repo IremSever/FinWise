@@ -8,27 +8,27 @@
 import Foundation
 
 class StockNewsViewModel {
-    private var webservice = StockNewsWebservice()
-    var marketTrends: [StockNews] = []
+    private var stockNewsWebservice = StockNewsWebservice()
+    var stockNews: [News] = []
     
-    func fetchMarketTrendsData(completion: @escaping () -> ()) {
-        webservice.fetchTrends { [weak self] result in
+    func fetchStockNewsData(completion: @escaping () -> ()) {
+        stockNewsWebservice.fetchStockNews { [weak self] result in
             switch result {
-            case .success(let finWiseModel):
-                self?.marketTrends = finWiseModel.data.trends
+            case .success(let stockNewsModel):
+                self?.stockNews = stockNewsModel.data.news
                 completion()
                 
             case .failure(let error):
-                print("Error fetching market trends: \(error.localizedDescription)")
+                print("Error fetching stock news: \(error.localizedDescription)")
             }
         }
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        return marketTrends.count
+        return stockNews.count
     }
     
-    func cellForRowAt(indexPath: IndexPath) -> StockNews {
-        return marketTrends[indexPath.row]
+    func cellForRowAt(indexPath: IndexPath) -> News {
+        return stockNews[indexPath.row]
     }
 }

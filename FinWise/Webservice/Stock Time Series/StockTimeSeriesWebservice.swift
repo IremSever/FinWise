@@ -1,15 +1,16 @@
 //
-//  Webservice.swift
+//  StockTimeSeriesWebservice.swift
 //  FinWise
 //
-//  Created by IREM SEVER on 22.10.2024.
+//  Created by IREM SEVER on 23.10.2024.
 //
+
 import Foundation
 
-class Webservice {
+class StockTimeSeriesWebservice {
     
-    func fetchTrends(completion: @escaping (Result<FinWiseModel, Error>) -> Void) {
-        let urlString = "https://real-time-finance-data.p.rapidapi.com/market-trends?trend_type=MARKET_INDEXES&country=us&language=en"
+    func fetchStockTimeSeries(completion: @escaping (Result<StockTimeSeriesModel, Error>) -> Void) {
+        let urlString = "https://real-time-finance-data.p.rapidapi.com/stock-time-series?symbol=AAPL%3ANASDAQ&period=1D&language=en"
         
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
@@ -33,7 +34,7 @@ class Webservice {
                 return
             }
             
-            //print("Response status code: \(httpResponse.statusCode)")
+            print("Response status code: \(httpResponse.statusCode)")
             
             guard let data = data else {
                 print("No data returned")
@@ -46,10 +47,10 @@ class Webservice {
             
             do {
                 let decoder = JSONDecoder()
-                let finWiseModel = try decoder.decode(FinWiseModel.self, from: data)
+                let stockTimeSeriesModel = try decoder.decode(StockTimeSeriesModel.self, from: data)
                 
                 DispatchQueue.main.async {
-                    completion(.success(finWiseModel))
+                    completion(.success(stockTimeSeriesModel))
                 }
             } catch let error {
                 print("JSON parsing error: \(error.localizedDescription)")

@@ -16,7 +16,7 @@ class TrendsCell: UICollectionViewCell {
     @IBOutlet weak var lblName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //setBorder()
     }
     
     func configure(with trend: MarketTrend) {
@@ -30,7 +30,7 @@ class TrendsCell: UICollectionViewCell {
     func setBorder() {
        // viewBg.layer.borderColor = UIColor(.black)
         viewBg.layer.cornerRadius = 50
-        viewBg.layer.shadowRadius = 50
+        viewBg.layer.shadowRadius = 200
     }
 }
 
