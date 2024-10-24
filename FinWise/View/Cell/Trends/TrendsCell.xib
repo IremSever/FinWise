@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOK-Xt-aav">
                                         <rect key="frame" x="0.0" y="0.0" width="198" height="67"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -38,13 +38,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idF-kd-mer">
                                                         <rect key="frame" x="0.0" y="0.0" width="99" height="33.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                        <color key="textColor" systemColor="systemGray3Color"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-D1-nZf">
                                                         <rect key="frame" x="0.0" y="33.666666666666671" width="99" height="33.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                        <color key="textColor" systemColor="systemGray3Color"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -83,6 +83,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="QJd-9e-vRe" secondAttribute="bottom" constant="8" id="9mM-uk-Pex"/>
                             <constraint firstAttribute="trailing" secondItem="QJd-9e-vRe" secondAttribute="trailing" constant="8" id="IaT-tg-N0Z"/>
+                            <constraint firstAttribute="height" constant="150" id="aIP-zb-FaZ"/>
                             <constraint firstItem="QJd-9e-vRe" firstAttribute="top" secondItem="ICO-Ra-4Yq" secondAttribute="top" constant="8" id="c1G-wC-Jnh"/>
                             <constraint firstItem="QJd-9e-vRe" firstAttribute="leading" secondItem="ICO-Ra-4Yq" secondAttribute="leading" constant="8" id="s0Y-GM-ZcV"/>
                         </constraints>
@@ -98,6 +99,7 @@
             </constraints>
             <size key="customSize" width="246" height="182"/>
             <connections>
+                <outlet property="imgIcon" destination="Giw-Zx-X0o" id="xsy-ft-UkF"/>
                 <outlet property="lblChange" destination="KV3-D1-nZf" id="oWf-ud-LVe"/>
                 <outlet property="lblName" destination="WOK-Xt-aav" id="AM7-rs-HB3"/>
                 <outlet property="lblValue" destination="idF-kd-mer" id="vPy-az-dZf"/>
@@ -108,9 +110,6 @@
     </objects>
     <resources>
         <image name="testHighlightEnabled-tvOS_1920-0_1080-0.1.png" width="480" height="350"/>
-        <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
