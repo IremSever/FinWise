@@ -17,36 +17,39 @@ class StockNewsCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         applyGradient()
-        setBorder()
+        setRoundedCorners()
     }
-    
     
     func configure(with stockNews: News) {
         lblTitle.text = stockNews.articleTitle
+        
         if let photoURL = URL(string: stockNews.articlePhotoURL) {
             imgNews.sd_setImage(with: photoURL, completed: nil)
         } else {
-            imgNews.image = nil 
+            imgNews.image = nil
         }
     }
     
-    func setBorder() {
+    func setRoundedCorners() {
         viewBg.layer.cornerRadius = 50
+        viewBg.layer.masksToBounds = true
     }
     
     func applyGradient() {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = viewGradient.bounds
-        gradientLayer.colors = [UIColor.black.cgColor, UIColor.clear.cgColor]
+        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.7).cgColor, UIColor.clear.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.5)
+        gradientLayer.frame = imgNews.bounds
         
-        viewGradient.layer.insertSublayer(gradientLayer, at: 0)
+        imgNews.layer.addSublayer(gradientLayer)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        viewGradient.layer.sublayers?.first?.frame = viewGradient.bounds
+        
+        if let gradientLayer = imgNews.layer.sublayers?.first as? CAGradientLayer {
+            gradientLayer.frame = imgNews.bounds
+        }
     }
-    
 }

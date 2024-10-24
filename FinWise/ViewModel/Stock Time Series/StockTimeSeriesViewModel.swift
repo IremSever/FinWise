@@ -7,20 +7,22 @@
 
 import Foundation
 
+import Foundation
+
 class StockTimeSeriesViewModel {
     private var stockTimeSeriesWebservice = StockTimeSeriesWebservice()
-    var stockTimeSeries: [TimeSeries] = []
+    var timeSeriesDataClass: TimeSeriesDataClass?
+    
+    var stockTimeSeries: [TimeSeries] {
+        return timeSeriesDataClass?.timeSeries?.values.map { $0 } ?? []
+    }
     
     func fetchStockTimeSeriesData(completion: @escaping () -> ()) {
         stockTimeSeriesWebservice.fetchStockTimeSeries { [weak self] result in
             switch result {
             case .success(let stockTimeSeriesModel):
-                if let timeSeriesDict = stockTimeSeriesModel.data.timeSeries {
-                    self?.stockTimeSeries = Array(timeSeriesDict.values)
-                    completion()
-                } else {
-                    print("No time series data available")
-                }
+                self?.timeSeriesDataClass = stockTimeSeriesModel.data
+                completion()
                 
             case .failure(let error):
                 print("Error fetching time series: \(error.localizedDescription)")
@@ -29,14 +31,26 @@ class StockTimeSeriesViewModel {
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        return stockTimeSeries.count
+        return 1
     }
     
-    func cellForRowAt(indexPath: IndexPath) -> TimeSeries {
-        guard indexPath.row < stockTimeSeries.count else {
-            fatalError("Index out of range for stockTimeSeries")
-        }
-        return stockTimeSeries[indexPath.row]
+    func cellForRowAt(indexPath: IndexPath) -> [TimeSeries] {
+        return stockTimeSeries
+    }
+    
+    func stockSymbol() -> String {
+        return timeSeriesDataClass?.symbol ?? ""
+    }
+    
+    func currentPrice() -> Double {
+        return timeSeriesDataClass?.price ?? 0.0
+    }
+    
+    func changePercent() -> Double {
+        return timeSeriesDataClass?.changePercent ?? 0.0
+    }
+    
+    func lastUpdateUTC() -> String {
+        return timeSeriesDataClass?.lastUpdateUTC ?? ""
     }
 }
-
