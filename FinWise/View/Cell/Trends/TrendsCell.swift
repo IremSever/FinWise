@@ -17,7 +17,7 @@ class TrendsCell: UICollectionViewCell {
     @IBOutlet weak var lblName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        //setBorder()
+        setBorder()
     }
     
     func configure(with trend: MarketTrend) {
@@ -26,12 +26,11 @@ class TrendsCell: UICollectionViewCell {
         lblChange.text = String(format: "%.2f (%.2f%%)", trend.change, trend.change_percent)
         lblChange.textColor = trend.change >= 0 ? .green : .red
         viewSeperator.backgroundColor = trend.change >= 0 ? .green : .red
-        imgIcon.image = trend.symbol
-        
     }
     
     func setBorder() {
-       // viewBg.layer.borderColor = UIColor(.black)
+        viewBg.layer.borderColor = CGColor(.orange)
+        viewBg.layer.borderWidth = 2
         viewBg.layer.cornerRadius = 50
         viewBg.layer.shadowRadius = 200
     }

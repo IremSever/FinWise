@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +26,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOK-Xt-aav">
                                         <rect key="frame" x="0.0" y="0.0" width="198" height="67"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5bH-Sj-9jA">
@@ -37,13 +38,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idF-kd-mer">
                                                         <rect key="frame" x="0.0" y="0.0" width="99" height="33.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" systemColor="systemGray3Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-D1-nZf">
                                                         <rect key="frame" x="0.0" y="33.666666666666671" width="99" height="33.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" systemColor="systemGray3Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -51,8 +52,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duV-QP-pw5">
                                                 <rect key="frame" x="99" y="0.0" width="99" height="67"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Giw-Zx-X0o">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testHighlightEnabled-tvOS_1920-0_1080-0.1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Giw-Zx-X0o">
                                                         <rect key="frame" x="69" y="31" width="30" height="30"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="J1F-cf-W7t"/>
                                                             <constraint firstAttribute="width" constant="30" id="u1O-lw-2bW"/>
@@ -77,7 +79,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.18719927048841059" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="QJd-9e-vRe" secondAttribute="bottom" constant="8" id="9mM-uk-Pex"/>
                             <constraint firstAttribute="trailing" secondItem="QJd-9e-vRe" secondAttribute="trailing" constant="8" id="IaT-tg-N0Z"/>
@@ -96,7 +98,6 @@
             </constraints>
             <size key="customSize" width="246" height="182"/>
             <connections>
-                <outlet property="imgIcon" destination="Giw-Zx-X0o" id="Ikw-Rb-B9Z"/>
                 <outlet property="lblChange" destination="KV3-D1-nZf" id="oWf-ud-LVe"/>
                 <outlet property="lblName" destination="WOK-Xt-aav" id="AM7-rs-HB3"/>
                 <outlet property="lblValue" destination="idF-kd-mer" id="vPy-az-dZf"/>
@@ -105,4 +106,13 @@
             <point key="canvasLocation" x="279.38931297709922" y="33.802816901408455"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="testHighlightEnabled-tvOS_1920-0_1080-0.1.png" width="480" height="350"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
