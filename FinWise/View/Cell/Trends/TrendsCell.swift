@@ -29,7 +29,7 @@ class TrendsCell: UICollectionViewCell {
     }
     
     func setBorder() {
-        viewBg.layer.borderColor = CGColor(.orange)
+        viewBg.layer.borderColor = UIColor.orange.cgColor
         viewBg.layer.borderWidth = 2
         viewBg.layer.cornerRadius = 50
         viewBg.layer.shadowRadius = 200
