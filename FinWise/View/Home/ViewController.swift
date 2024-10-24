@@ -31,37 +31,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
         
-        viewModelStockNews.fetchStockNewsData { [weak self] in
-            DispatchQueue.main.async {
-                self?.collectionView.reloadData()
-            }
-        }
-        
         viewModelStockTimeSeries.fetchStockTimeSeriesData { [weak self] in
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
             }
         }
         
+        viewModelStockNews.fetchStockNewsData { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
+
         collectionView.collectionViewLayout = createLayout()
     }
     
     func registerCells() {
         collectionView.register(UINib(nibName: "TrendsCell", bundle: nil), forCellWithReuseIdentifier: "TrendsCell")
-        collectionView.register(UINib(nibName: "StockNewsCell", bundle: nil), forCellWithReuseIdentifier: "StockNewsCell")
         collectionView.register(UINib(nibName: "StockTimeSeriesCell", bundle: nil), forCellWithReuseIdentifier: "StockTimeSeriesCell")
+        collectionView.register(UINib(nibName: "StockNewsCell", bundle: nil), forCellWithReuseIdentifier: "StockNewsCell")
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             switch sectionIndex {
             case 0:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6), heightDimension: .estimated(180))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .estimated(100))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(180))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 3)
 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
@@ -71,23 +71,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return section
 
             case 1:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .estimated(268))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8)
-
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(536))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
-
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-                section.interGroupSpacing = 0
-
-                return section
-
-            case 2:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(300))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(300))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -96,6 +82,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
 
                 return section
+
+            case 2:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .estimated(200))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+                section.interGroupSpacing = 0
+
+                return section
+                
 
             default:
                 return nil
@@ -111,10 +112,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             if section == 0 {
                 return viewModel.numberOfRowsInSection(section: section)
-            } else if section == 1 {
-                return viewModelStockNews.numberOfRowsInSection(section: section)
-            } else if section == 2 {
+            }  else if section == 1 {
                 return viewModelStockTimeSeries.numberOfRowsInSection(section: section)
+            } else if section == 2 {
+                return viewModelStockNews.numberOfRowsInSection(section: section)
             }
             return 0
         }
@@ -127,16 +128,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let marketTrend = viewModel.cellForRowAt(indexPath: indexPath)
             cell.configure(with: marketTrend)
             return cell
-        } else if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockNewsCell", for: indexPath) as! StockNewsCell
-            let stockNews = viewModelStockNews.cellForRowAt(indexPath: indexPath)
-            cell.configure(with: stockNews)
-            return cell
-        } else  if indexPath.section == 2 {
+        }  else  if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockTimeSeriesCell", for: indexPath) as! StockTimeSeriesCell
             let timeSeriesData = viewModelStockTimeSeries.cellForRowAt(indexPath: indexPath)
             cell.configure(with: timeSeriesData)
             
+            return cell
+        }  else if indexPath.section == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockNewsCell", for: indexPath) as! StockNewsCell
+            let stockNews = viewModelStockNews.cellForRowAt(indexPath: indexPath)
+            cell.configure(with: stockNews)
             return cell
         }
         else {

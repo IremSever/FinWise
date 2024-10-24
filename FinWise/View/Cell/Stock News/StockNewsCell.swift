@@ -31,13 +31,13 @@ class StockNewsCell: UICollectionViewCell {
     }
     
     func setRoundedCorners() {
-        viewBg.layer.cornerRadius = 50
+        viewBg.layer.cornerRadius = 20
         viewBg.layer.masksToBounds = true
     }
     
     func applyGradient() {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.7).cgColor, UIColor.clear.cgColor]
+        gradientLayer.colors = [UIColor.black.withAlphaComponent(1.0).cgColor, UIColor.clear.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.5)
         gradientLayer.frame = imgNews.bounds
