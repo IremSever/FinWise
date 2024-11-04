@@ -5,7 +5,6 @@
 //  Created by IREM SEVER on 23.10.2024.
 //
 import UIKit
-import UIKit
 import DGCharts
 
 class StockTimeSeriesCell: UICollectionViewCell, ChartViewDelegate {
@@ -43,15 +42,15 @@ class StockTimeSeriesCell: UICollectionViewCell, ChartViewDelegate {
         }
         
         let set = LineChartDataSet(entries: entries, label: "NASDAQ Price")
-        set.colors = [UIColor.orange]
-        set.circleColors = [UIColor.orange]
+        set.colors = [UIColor.black]
+        set.circleColors = [UIColor.black]
         set.circleRadius = 3
         set.drawFilledEnabled = true
 
         let gradientColors = [UIColor.orange.cgColor, UIColor.clear.cgColor] as CFArray
         let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: [0.0, 1.0])!
-        set.fillAlpha = 0.2
-        set.fillColor = .orange
+       
+        set.fillColor = UIColor(red: 237/255, green: 248/255, blue: 95/255, alpha: 1.0)
         
         let data = LineChartData(dataSet: set)
         viewChart.data = data

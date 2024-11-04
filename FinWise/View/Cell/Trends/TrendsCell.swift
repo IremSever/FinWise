@@ -29,14 +29,14 @@ class TrendsCell: UICollectionViewCell {
     }
     
     func setBorder() {
-        viewBg.layer.borderColor = UIColor.orange.cgColor
+        viewBg.layer.borderColor = UIColor(red: 237/255, green: 248/255, blue: 95/255, alpha: 1.0).cgColor
         viewBg.layer.borderWidth = 0.5
         viewBg.layer.cornerRadius = 15
         viewBg.layer.shadowRadius = 200
     }
   
     func styleImageIcon() {
-        imgIcon.layer.shadowColor = UIColor.orange.cgColor
+        imgIcon.layer.shadowColor = UIColor(red: 237/255, green: 248/255, blue: 95/255, alpha: 1.0).cgColor
         imgIcon.layer.shadowOpacity = 0.3
         imgIcon.layer.shadowOffset = CGSize(width: 2, height: 2)
         imgIcon.layer.shadowRadius = 50

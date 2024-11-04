@@ -1,0 +1,597 @@
+"data": {
+        "id": "3577036",
+        "type": "news",
+        "attributes": {
+            "publishOn": "2020-05-22T03:03:50-04:00",
+            "isLockedPro": false,
+            "commentCount": 176,
+            "gettyImageUrl": null,
+            "videoPreviewUrl": null,
+            "videoDuration": null,
+            "themes": {
+                "etfs-defunct-19004": {
+                    "id": 19004,
+                    "path": "/",
+                    "slug": "etfs-defunct-19004",
+                    "title": null,
+                    "sasource": "",
+                    "non_theme": true
+                },
+                "mid-cap": {
+                    "id": 115412,
+                    "path": "/",
+                    "slug": "mid-cap",
+                    "title": null,
+                    "sasource": "",
+                    "non_theme": true
+                },
+                "politics": {
+                    "id": 601057,
+                    "path": "/",
+                    "slug": "politics",
+                    "title": null,
+                    "sasource": "",
+                    "non_theme": true
+                },
+                "global": {
+                    "id": 614455,
+                    "path": "/",
+                    "slug": "global",
+                    "title": null,
+                    "sasource": "",
+                    "non_theme": true
+                },
+                "top-news": {
+                    "id": 614460,
+                    "path": "/market-news/top-news",
+                    "slug": "top-news",
+                    "title": "Top News",
+                    "sasource": "theme_breadcrumb",
+                    "non_theme": false
+                }
+            },
+            "title": "China drops GDP target, commits to trade deal",
+            "isPaywalled": false,
+            "lastModified": "2020-05-22T06:57:25-04:00",
+            "status": "Active",
+            "content": "<ul>\n<li>In a sign of the uncertainty facing its economy, China <a href=\"https://www.reuters.com/article/us-china-parliament-opening/china-drops-gdp-goal-as-parliament-opens-virus-slams-economy-idUSKBN22Y05K\" target=\"_blank\">scrapped</a> its annual growth target for the first time since it began the practice in 1994, due to the \"global epidemic situation and economic and trade situation.\"</li>\n<li>The country's economy shrank 6.8% in Q1, the first contraction in decades, setting a somber tone to this year's annual parliamentary meeting.</li>\n<li>Remarks from Premier Li Keqiang also <a href=\"https://www.bloomberg.com/news/articles/2020-05-22/china-pledges-to-implement-u-s-trade-deal-amid-rising-tensions\" target=\"_blank\">addressed</a> dealings abroad, saying, \"we will work with the United States to implement the phase one China-U.S. economic and trade agreement.\"</li>\n<li>Shanghai <font color=\"red\">-1.7%</font> to 2,820</li>\n<li>ETFs: <a href=\"https://seekingalpha.com/symbol/FXI\" title=\"iShares China Large-Cap ETF\">FXI</a>, <a href=\"https://seekingalpha.com/symbol/KWEB\" title=\"KraneShares CSI China Internet ETF\">KWEB</a>, <a href=\"https://seekingalpha.com/symbol/CQQQ\" title=\"Invesco China Technology ETF\">CQQQ</a>, <a href=\"https://seekingalpha.com/symbol/ASHR\" title=\"Deutsche X-trackers Harvest CSI 300 China A-Shares ETF\">ASHR</a>, <a href=\"https://seekingalpha.com/symbol/YINN\" title=\"Direxion Daily FTSE China Bull 3x Shares ETF\">YINN</a>, <a href=\"https://seekingalpha.com/symbol/MCHI\" title=\"iShares MSCI China ETF\">MCHI</a>, <a href=\"https://seekingalpha.com/symbol/TDF\" title=\"Templeton Dragon Fund\">TDF</a>, <a href=\"https://seekingalpha.com/symbol/EWH\" title=\"iShares MSCI Hong Kong ETF\">EWH</a>, <a href=\"https://seekingalpha.com/symbol/CAF\" title=\"Morgan Stanley China A Share Fund\">CAF</a>, <a href=\"https://seekingalpha.com/symbol/YANG\" title=\"Direxion Daily FTSE China Bear 3x Shares ETF\">YANG</a>, <a href=\"https://seekingalpha.com/symbol/KBA\" title=\"KraneShares Bosera MSCI China A ETF\">KBA</a>, <a href=\"https://seekingalpha.com/symbol/GXC\" title=\"SPDR S&amp;P China ETF\">GXC</a>, <a href=\"https://seekingalpha.com/symbol/CHIQ\" title=\"Global X China Consumer ETF\">CHIQ</a>, <a href=\"https://seekingalpha.com/symbol/CYB\" title=\"WisdomTree Chinese Yuan ETF\">CYB</a>, <a href=\"https://seekingalpha.com/symbol/FXP\" title=\"ProShares UltraShort FTSE China 25 ETF\">FXP</a>, <a href=\"https://seekingalpha.com/symbol/CHIX\" title=\"Global X Funds - Global X MSCI China Financials ETF\">CHIX</a>\n</li>\n</ul>",
+            "metered": false,
+            "correctionReason": null,
+            "audioDuration": null
+        },
+        "relationships": {
+            "author": {
+                "data": {
+                    "id": "27427253",
+                    "type": "newsAuthorUser"
+                }
+            },
+            "sentiments": {
+                "data": []
+            },
+            "primaryTickers": {
+                "data": [
+                    {
+                        "id": "372",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "108672",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15143",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "111172",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15123",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "17760",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "7885",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "532",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "4945",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15124",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "115912",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "7104",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15112",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "5133",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "9122",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15151",
+                        "type": "tag"
+                    }
+                ]
+            },
+            "secondaryTickers": {
+                "data": [
+                    {
+                        "id": "372",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "532",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "4945",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "5133",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "7104",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "7885",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "9122",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15112",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15123",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15124",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15143",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "15151",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "17760",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "108672",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "111172",
+                        "type": "tag"
+                    },
+                    {
+                        "id": "115912",
+                        "type": "tag"
+                    }
+                ]
+            },
+            "otherTags": {
+                "data": []
+            },
+            "ratingChangeNotice": {}
+        },
+        "links": {
+            "self": "/news/3577036-china-drops-gdp-target-commits-to-trade-deal",
+            "canonical": "https://seekingalpha.com/news/3577036-china-drops-gdp-target-commits-to-trade-deal",
+            "uriImage": "https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png",
+            "schemaImage": {
+                "@type": "ImageObject",
+                "url": "https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png"
+            }
+        }
+    },
+    "included": [
+        {
+            "id": "27427253",
+            "type": "newsAuthorUser",
+            "attributes": {
+                "userId": 27427253,
+                "image": {
+                    "small": "https://static1.seekingalpha.com/images/users_profile/027/427/253/small_pic.png?t=42c6a65e86",
+                    "medium": "https://static1.seekingalpha.com/images/users_profile/027/427/253/medium_pic.png?t=c5a0f8957c",
+                    "big": "https://static1.seekingalpha.com/images/users_profile/027/427/253/big_pic.png?t=86760b990a",
+                    "extra_large": "https://static1.seekingalpha.com/images/users_profile/027/427/253/extra_large_pic.png?t=9e11f5bd5d"
+                },
+                "nick": "Yoel Minkoff, SA News Editor",
+                "bio": "<p>Yoel Minkoff leads the Content Development team at Seeking Alpha. He also manages the company's flagship market newsletter, Wall Street Breakfast, which is enjoyed by 4 million subscribers daily. Yoel joined Seeking Alpha in 2014 after previous positions at Moody's Investors Service and Merrill Lynch, and completed his MBA at the University of Massachusetts.</p><p></p>",
+                "slug": "sa-news-team"
+            },
+            "links": {
+                "self": "/user/27427253",
+                "profileUrl": "/author/sa-editor-yoel-minkoff"
+            }
+        },
+        {
+            "id": "372",
+            "type": "tag",
+            "attributes": {
+                "slug": "fxi",
+                "name": "FXI",
+                "company": "iShares China Large-Cap ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/FXI"
+            }
+        },
+        {
+            "id": "108672",
+            "type": "tag",
+            "attributes": {
+                "slug": "kweb",
+                "name": "KWEB",
+                "company": "KraneShares CSI China Internet ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/KWEB"
+            }
+        },
+        {
+            "id": "15143",
+            "type": "tag",
+            "attributes": {
+                "slug": "cqqq",
+                "name": "CQQQ",
+                "company": "Invesco China Technology ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/CQQQ"
+            }
+        },
+        {
+            "id": "111172",
+            "type": "tag",
+            "attributes": {
+                "slug": "ashr",
+                "name": "ASHR",
+                "company": "Xtrackers Harvest CSI 300 China A-Shares ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/ASHR"
+            }
+        },
+        {
+            "id": "15123",
+            "type": "tag",
+            "attributes": {
+                "slug": "yinn",
+                "name": "YINN",
+                "company": "Direxion Daily FTSE China Bull 3X Shares ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/YINN"
+            }
+        },
+        {
+            "id": "17760",
+            "type": "tag",
+            "attributes": {
+                "slug": "mchi",
+                "name": "MCHI",
+                "company": "iShares MSCI China ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NASDAQ",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/MCHI"
+            }
+        },
+        {
+            "id": "7885",
+            "type": "tag",
+            "attributes": {
+                "slug": "tdf",
+                "name": "TDF",
+                "company": "Templeton Dragon Fund Inc",
+                "tagKind": "Tags::Ticker",
+                "equityType": "cef",
+                "exchange": "NYSE",
+                "fundTypeId": 3,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": false
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/TDF"
+            }
+        },
+        {
+            "id": "532",
+            "type": "tag",
+            "attributes": {
+                "slug": "ewh",
+                "name": "EWH",
+                "company": "iShares MSCI Hong Kong ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/EWH"
+            }
+        },
+        {
+            "id": "4945",
+            "type": "tag",
+            "attributes": {
+                "slug": "caf",
+                "name": "CAF",
+                "company": "Morgan Stanley China A Share Fund",
+                "tagKind": "Tags::Ticker",
+                "equityType": "cef",
+                "exchange": "NYSE",
+                "fundTypeId": 3,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": false
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/CAF"
+            }
+        },
+        {
+            "id": "15124",
+            "type": "tag",
+            "attributes": {
+                "slug": "yang",
+                "name": "YANG",
+                "company": "Direxion Daily FTSE China Bear 3X Shares ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/YANG"
+            }
+        },
+        {
+            "id": "115912",
+            "type": "tag",
+            "attributes": {
+                "slug": "kba",
+                "name": "KBA",
+                "company": "KraneShares Bosera MSCI China A 50 Connect Index ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/KBA"
+            }
+        },
+        {
+            "id": "7104",
+            "type": "tag",
+            "attributes": {
+                "slug": "gxc",
+                "name": "GXC",
+                "company": "SPDR® S&P China ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/GXC"
+            }
+        },
+        {
+            "id": "15112",
+            "type": "tag",
+            "attributes": {
+                "slug": "chiq",
+                "name": "CHIQ",
+                "company": "Global X MSCI China Consumer Disc ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/CHIQ"
+            }
+        },
+        {
+            "id": "5133",
+            "type": "tag",
+            "attributes": {
+                "slug": "cyb-defunct-5133",
+                "name": "CYB",
+                "company": "WisdomTree Chinese Yuan Strategy Fund ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": true,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/CYB-DEFUNCT-5133"
+            }
+        },
+        {
+            "id": "9122",
+            "type": "tag",
+            "attributes": {
+                "slug": "fxp",
+                "name": "FXP",
+                "company": "ProShares UltraShort FTSE China 50 ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": false,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/FXP"
+            }
+        },
+        {
+            "id": "15151",
+            "type": "tag",
+            "attributes": {
+                "slug": "chix-defunct-15151",
+                "name": "CHIX",
+                "company": "Global X Funds - Global X MSCI China Financials ETF",
+                "tagKind": "Tags::Ticker",
+                "equityType": "etf",
+                "exchange": "NYSEARCA",
+                "fundTypeId": 1,
+                "isDefunct": true,
+                "currency": "USD",
+                "isBdc": false,
+                "isReit": false,
+                "isEtf": true
+            },
+            "relationships": {},
+            "links": {
+                "self": "/symbol/CHIX-DEFUNCT-15151"
+            }
+        }
+    ]
+}
