@@ -19,10 +19,10 @@ Receive tailored insights and recommendations based on your preferences and fina
 ### Insights & Progress Tracking
 Analyze your financial performance with detailed reports and visual progress indicators. FinWise offers you a comprehensive view of your financial health, enabling you to track trends and make adjustments based on your goals.
 
-<img src="https://github.com/user-attachments/assets/52b636a0-ea5f-4abe-b6d1-ea8917745008" alt="finwise-login" width="240"/>
-<img src="https://github.com/user-attachments/assets/677eb54c-00e9-476a-b3b3-2d4f56185f44" alt="finwise-linechart" width="240"/>
-<img src="https://github.com/user-attachments/assets/8848accb-3665-4925-8e85-0e26fe7e0d22" alt="finwise-barchart" width="240"/>
-<img src="https://github.com/user-attachments/assets/fe51dc16-3626-46c4-860c-51ff8c194d1d" alt="finwise-piechat" width="240"/>
+<img src="https://github.com/user-attachments/assets/52b636a0-ea5f-4abe-b6d1-ea8917745008" alt="finwise-login" width="242"/>
+<img src="https://github.com/user-attachments/assets/677eb54c-00e9-476a-b3b3-2d4f56185f44" alt="finwise-linechart" width="242"/>
+<img src="https://github.com/user-attachments/assets/8848accb-3665-4925-8e85-0e26fe7e0d22" alt="finwise-barchart" width="242"/>
+<img src="https://github.com/user-attachments/assets/fe51dc16-3626-46c4-860c-51ff8c194d1d" alt="finwise-piechat" width="242"/>
 
 
 
