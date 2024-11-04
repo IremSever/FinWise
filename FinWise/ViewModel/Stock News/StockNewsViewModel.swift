@@ -24,11 +24,16 @@ class StockNewsViewModel {
         }
     }
     
-    func numberOfRowsInSection(section: Int) -> Int {
-        return stockNews.count
-    }
-    
-    func cellForRowAt(indexPath: IndexPath) -> News {
-        return stockNews[indexPath.row]
-    }
+    func numberOfItemsForCase3() -> Int {
+           return min(stockNews.count, 6)
+       }
+       
+       func numberOfItemsForCase5() -> Int {
+           return min(max(stockNews.count - 6, 0), 4)
+       }
+       
+       func cellForRowAt(indexPath: IndexPath) -> News {
+           let index = indexPath.section == 3 ? indexPath.row : indexPath.row + 6
+           return stockNews[index]
+       }
 }

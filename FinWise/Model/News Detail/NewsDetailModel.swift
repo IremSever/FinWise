@@ -8,11 +8,18 @@
 import Foundation
 
 struct NewsDetailModel {
-    let uuid: String
-    let title: String
-    let publisher: String
+    let uuid: String?
+    let title: String?
+    let publisher: String?
     let link: String
-    let providerPublishTime: Int
-    let type: String
-    let thumbnailURL: String
+    let providerPublishTime: Int?
+    let type: String?
+    let thumbnail: Thumbnail?
+}
+
+struct Thumbnail {
+    let url: String?
+    let width: Int?
+    let height: Int?
+    let tag: String?
 }

@@ -40,7 +40,13 @@ class BarChartCell: UICollectionViewCell, ChartViewDelegate {
         }
         
         let set = BarChartDataSet(entries: entries)
-        set.colors = ChartColorTemplates.joyful()
+        set.colors = [
+            UIColor(red: 10/255, green: 10/255, blue: 12/255, alpha: 1),
+            UIColor(red: 237/255, green: 248/255, blue: 95/255, alpha: 1),
+            UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 1),
+            UIColor(red: 201/255, green: 188/255, blue: 246/255, alpha: 1)
+        ]
+        
         let data = BarChartData(dataSet: set)
         barChart.data = data
     }

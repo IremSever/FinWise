@@ -31,7 +31,8 @@ class StockNewsCell: UICollectionViewCell {
     
     func configure(with stockNews: News, index: Int) {
         lblTitle.text = stockNews.articleTitle
-        self.index = index // Store the index
+        print(index)
+        self.index = index
         
         if let photoURL = URL(string: stockNews.articlePhotoURL) {
             imgNews.sd_setImage(with: photoURL, completed: nil)

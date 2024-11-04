@@ -18,7 +18,7 @@ class Webservice {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("9cd3c3e097msh5344285cb3b108ep10f0bajsnc47c37ffad6c", forHTTPHeaderField: "x-rapidapi-key")
+        request.addValue("5de7d22abcmsh46c0760033e149fp1bb52ejsnc494768bc4fd", forHTTPHeaderField: "x-rapidapi-key")
         request.addValue("real-time-finance-data.p.rapidapi.com", forHTTPHeaderField: "x-rapidapi-host")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in

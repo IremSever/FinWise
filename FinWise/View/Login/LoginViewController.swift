@@ -114,6 +114,7 @@ class LoginViewController: UIViewController {
         
         
     }
+    
     func setupTextAndButton() {
         let titleLabel = UILabel()
         titleLabel.text = "Manage\nYour Finance\nRight Now"

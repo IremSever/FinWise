@@ -8,13 +8,9 @@
 import Foundation
 
 class NewsDetailViewModel {
-    private var newsList: [NewsDetailModel] = []
+    var newsList: [NewsDetailModel] = []
     
-    init() {
-        loadNewsFromJSON()
-    }
-    
-    private func loadNewsFromJSON() {
+    func fetchNewsDetailData(completion: @escaping () -> ()) {
         guard let path = Bundle.main.path(forResource: "newsdetail", ofType: "json") else {
             print("JSON file not found.")
             return
@@ -30,12 +26,19 @@ class NewsDetailViewModel {
                           let link = data["link"] as? String,
                           let providerPublishTime = data["providerPublishTime"] as? Int,
                           let type = data["type"] as? String,
-                          let thumbnailResolutions = data["thumbnail"] as? [String: Any],
-                          let resolutions = thumbnailResolutions["resolutions"] as? [[String: Any]],
-                          let thumbnailURL = resolutions.first?["url"] as? String else {
+                          let thumbnailDict = data["thumbnail"] as? [String: Any],
+                          let resolutions = thumbnailDict["resolutions"] as? [[String: Any]],
+                          let firstResolution = resolutions.first,
+                          let thumbnailURL = firstResolution["url"] as? String,
+                          let width = firstResolution["width"] as? Int else {
                         return nil
                     }
-                    return NewsDetailModel(uuid: uuid, title: title, publisher: publisher, link: link, providerPublishTime: providerPublishTime, type: type, thumbnailURL: thumbnailURL)
+                    
+                    let height = firstResolution["height"] as? Int
+                    let tag = firstResolution["tag"] as? String
+                    
+                    let thumbnail = Thumbnail(url: thumbnailURL, width: width, height: height, tag: tag)
+                    return NewsDetailModel(uuid: uuid, title: title, publisher: publisher, link: link, providerPublishTime: providerPublishTime, type: type, thumbnail: thumbnail)
                 }
             }
         } catch {
@@ -43,8 +46,14 @@ class NewsDetailViewModel {
         }
     }
     
-    func getLink(for index: Int) -> String? {
+    func numberOfRowsInSection(section: Int) -> Int {
+        return 1
+    }
+    func cellForRowAt(indexPath: IndexPath) -> [NewsDetailModel] {
+        return newsList
+    }
+    func getNewsModel(for index: Int) -> NewsDetailModel? {
         guard index >= 0 && index < newsList.count else { return nil }
-        return newsList[index].link
+        return newsList[index]
     }
 }
